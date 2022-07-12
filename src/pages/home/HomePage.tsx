@@ -26,9 +26,9 @@ export class HomePageComponent extends React.Component<WithTranslation, State> {
 
 
     render() {
-        // const { t } = this.props;
+        const { t } = this.props;
         // const { productList, loading, error } = this.state;
-
+console.info('jjjjj',this.props)
         return (
             <div>
 

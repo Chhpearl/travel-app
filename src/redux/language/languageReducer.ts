@@ -1,12 +1,13 @@
 import i18n from "i18next";
-import { CHANGE_LANGUAGE,ADD_LANGUAGE, LanguageActionTypes } from "./languageActions";
+import { CHANGE_LANGUAGE, LanguageActionTypes } from "./languageActions";
 export interface LanguageState {
     language: "en" | "zh";
     languageList:{name:string; code:string; }[];
 }
 
+// 按钮处初始化显示
 const defaultState: LanguageState = {
-    language:"zh",
+    language:"en",
     languageList:[
         { name:"中文", code:"zh" },
         { name:"English", code:"en" }
@@ -20,11 +21,6 @@ export default ( state= defaultState, action: LanguageActionTypes)=>{
             return { 
                 ...state, 
                 language: action.payload
-            };
-        case ADD_LANGUAGE:
-            return { 
-                ...state, 
-                languageList:[...state.languageList,action.payload]
             };
         default:
             return state;
