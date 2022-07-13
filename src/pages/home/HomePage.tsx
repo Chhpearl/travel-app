@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './HomePage.module.css';
-import { Header, SideMenu, Carousel, ProductCollection } from '../../components';
+import { Header, SideMenu, Carousel, ProductCollection , Footer} from '../../components';
 import { Row, Col, Typography } from 'antd';
 import sideImage from '../../assets/images/sider_2019_12-09.png';
 import sideImage2 from '../../assets/images/sider_2019_02-04.png';
@@ -50,7 +50,7 @@ export class HomePageComponent extends React.Component<WithTranslation> {
                         products={productList[2].touristRoutes}
                     />
                 </div>
-
+                <Footer />
             </div>
         )
 

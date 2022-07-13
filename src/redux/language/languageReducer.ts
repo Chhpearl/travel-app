@@ -14,6 +14,7 @@ const defaultState: LanguageState = {
     ]
 }
 
+// 在模块导入导出之前，将箭头函数指定给变量
 let LanguageReducer = (state = defaultState, action: LanguageActionTypes) => {
     switch (action.type) {
         case CHANGE_LANGUAGE:
